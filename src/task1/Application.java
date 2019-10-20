@@ -6,13 +6,13 @@ public class Application {
         CoffeRobot cr = new CoffeRobot();
         RobotDancer rd = new RobotDancer();
         RobotCoocker rc = new RobotCoocker();
-        r.work();
-        cr.work();
-        rd.work();
-        rc.work();
+        r.work(r);
+        r.work(cr);
+        r.work(rd);
+        r.work(rc);
         Robot robots[]= {r,cr,rd,rc};
         for (int i = 0; i <robots.length ; i++) {
-            robots[i].work();
+            r.work(robots[i]);
         }
     }
 }
